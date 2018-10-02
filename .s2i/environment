@@ -1,13 +1,2 @@
-apiVersion: v1
-kind: BuildConfig
-metadata:
-  name: secret-example-bc
-spec:
-  strategy:
-    sourceStrategy:
-      env:
-      - name: MYVAL
-        valueFrom:
-          secretKeyRef:
-            key: myval
-            name: mysecret
+APP_MODULE=wsgi:app
+APP_CONFIG=gunicorn.conf
